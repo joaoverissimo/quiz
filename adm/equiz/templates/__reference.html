@@ -1,0 +1,45 @@
+<table>
+    <tr>
+        <th>__(equiz.cod)</th>
+        <th>__(equiz.usuario)</th>
+        <th>__(equiz.seo)</th>
+        <th>__(equiz.titulo)</th>
+        <th>__(equiz.data)</th>
+        <th>__(equiz.imagem)</th>
+        <th>__(equiz.flaprovado)</th>
+    </tr>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getUsuario</td>
+            <td>getSeo</td>
+            <td>getTitulo</td>
+            <td>getData</td>
+            <td>getImagem</td>
+            <td>getFlaprovado</td>
+        </tr>
+    </repeat>
+</table>
+
+<h2>Associações:</h2>
+<repeat>
+<ul style="border: 1px solid red; margin: 10px">
+    <li><b>objUsuario</b></li>
+    <li>objUsuario->getCod</li>
+    <li>objUsuario->getNome</li>
+    <li>objUsuario->getMail</li>
+    <li>objUsuario->getSenha</li>
+    <li>objUsuario->getGrupo</li>
+
+    <li><b>objSeo</b></li>
+    <li>objSeo->getCod</li>
+    <li>objSeo->getTitulo</li>
+    <li>objSeo->getDescricao</li>
+
+    <li><b>objImagem</b></li>
+    <li>objImagem->getCod</li>
+    <li>objImagem->getValor</li>
+
+    
+</ul>
+</repeat>

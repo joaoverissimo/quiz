@@ -1,0 +1,9 @@
+table_locmapaponto;Locmapaponto
+locmapaponto.cod;Cod
+locmapaponto.lat;Lat
+locmapaponto.lng;Lng
+locmapaponto.heading;Heading
+locmapaponto.pitch;Pitch
+locmapaponto.zoom;Zoom
+locmapaponto.comportamento;Comportamento
+locmapaponto.suportaview;Suportaview

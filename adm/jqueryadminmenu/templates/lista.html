@@ -1,0 +1,34 @@
+<table class="table table-hover table-striped" id="tablelista">
+    <thead>
+        <tr>
+            <th>__(jqueryadminmenu.cod)</th>
+        <th>__(jqueryadminmenu.codmenu)</th>
+        <th>__(jqueryadminmenu.titulo)</th>
+        <th>__(jqueryadminmenu.patch)</th>
+        <th>__(jqueryadminmenu.icon)</th>
+        <th>__(jqueryadminmenu.addhtml)</th>
+        <th>__(jqueryadminmenu.ordem)</th>            
+            <th></th>
+        </tr>
+    </thead>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getCodmenu</td>
+            <td>getTitulo</td>
+            <td>getPatch</td>
+            <td>getIcon</td>
+            <td>getAddhtml</td>
+            <td>getOrdem</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-primary" href="editar.php?cod=getCod"><i class="icon-pencil icon-white"></i> __(editar)</a>
+                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="deletar.php?cod=getCod"><i class="icon-trash"></i> __(deletar)</a></li>                    
+                    </ul>
+                </div>            
+            </td>
+        </tr>
+    </repeat>
+</table>

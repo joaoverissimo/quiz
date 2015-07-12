@@ -1,0 +1,32 @@
+<table>
+    <tr>
+        <th>__(jqueryseorel.cod)</th>
+        <th>__(jqueryseorel.seo)</th>
+        <th>__(jqueryseorel.palavra)</th>
+    </tr>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getSeo</td>
+            <td>getPalavra</td>
+        </tr>
+    </repeat>
+</table>
+
+<h2>Associações:</h2>
+<repeat>
+<ul style="border: 1px solid red; margin: 10px">
+    <li><b>objSeo</b></li>
+    <li>objSeo->getCod</li>
+    <li>objSeo->getTitulo</li>
+    <li>objSeo->getDescricao</li>
+
+    <li><b>objPalavra</b></li>
+    <li>objPalavra->getCod</li>
+    <li>objPalavra->getPalavra</li>
+    <li>objPalavra->getUrl</li>
+    <li>objPalavra->getCount</li>
+
+    
+</ul>
+</repeat>
