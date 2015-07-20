@@ -1,0 +1,38 @@
+<table>
+    <tr>
+        <th>__(epergunta.cod)</th>
+        <th>__(epergunta.quiz)</th>
+        <th>__(epergunta.descricao)</th>
+        <th>__(epergunta.imagem)</th>
+        <th>__(epergunta.ordem)</th>
+    </tr>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getQuiz</td>
+            <td>getDescricao</td>
+            <td>getImagem</td>
+            <td>getOrdem</td>
+        </tr>
+    </repeat>
+</table>
+
+<h2>Associações:</h2>
+<repeat>
+<ul style="border: 1px solid red; margin: 10px">
+    <li><b>objQuiz</b></li>
+    <li>objQuiz->getCod</li>
+    <li>objQuiz->getUsuario</li>
+    <li>objQuiz->getSeo</li>
+    <li>objQuiz->getTitulo</li>
+    <li>objQuiz->getData</li>
+    <li>objQuiz->getImagem</li>
+    <li>objQuiz->getFlaprovado</li>
+
+    <li><b>objImagem</b></li>
+    <li>objImagem->getCod</li>
+    <li>objImagem->getValor</li>
+
+    
+</ul>
+</repeat>

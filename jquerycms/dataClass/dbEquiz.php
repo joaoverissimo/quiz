@@ -20,7 +20,9 @@ class dbEquiz extends dbaseEquiz {
 
         $exec = parent::Deletar($Conexao, $cod); 
 
-        $obj->objImagem()->Delete();
+        if ($obj->getImagem() !== null) {
+            $obj->objImagem()->Delete();
+        }
         $obj->objSeo()->Delete();
         //$obj->objUsuario()->Delete();
         

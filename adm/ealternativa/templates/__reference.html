@@ -1,0 +1,47 @@
+<table>
+    <tr>
+        <th>__(ealternativa.cod)</th>
+        <th>__(ealternativa.quiz)</th>
+        <th>__(ealternativa.pergunta)</th>
+        <th>__(ealternativa.descricao)</th>
+        <th>__(ealternativa.imagem)</th>
+        <th>__(ealternativa.ordem)</th>
+    </tr>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getQuiz</td>
+            <td>getPergunta</td>
+            <td>getDescricao</td>
+            <td>getImagem</td>
+            <td>getOrdem</td>
+        </tr>
+    </repeat>
+</table>
+
+<h2>Associações:</h2>
+<repeat>
+<ul style="border: 1px solid red; margin: 10px">
+    <li><b>objQuiz</b></li>
+    <li>objQuiz->getCod</li>
+    <li>objQuiz->getUsuario</li>
+    <li>objQuiz->getSeo</li>
+    <li>objQuiz->getTitulo</li>
+    <li>objQuiz->getData</li>
+    <li>objQuiz->getImagem</li>
+    <li>objQuiz->getFlaprovado</li>
+
+    <li><b>objPergunta</b></li>
+    <li>objPergunta->getCod</li>
+    <li>objPergunta->getQuiz</li>
+    <li>objPergunta->getDescricao</li>
+    <li>objPergunta->getImagem</li>
+    <li>objPergunta->getOrdem</li>
+
+    <li><b>objImagem</b></li>
+    <li>objImagem->getCod</li>
+    <li>objImagem->getValor</li>
+
+    
+</ul>
+</repeat>

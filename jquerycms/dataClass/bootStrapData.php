@@ -13,3 +13,8 @@ require_once 'dbJqueryseopalavra.php';
 require_once 'dbJqueryseorel.php';
 require_once 'dbJqueryseotabela.php';
 require_once 'dbLocmapaponto.php';
+
+require_once 'dbEalternativa.php';
+require_once 'dbEalternativaresultado.php';
+require_once 'dbEpergunta.php';
+require_once 'dbEresultado.php';

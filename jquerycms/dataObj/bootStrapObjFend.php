@@ -13,3 +13,8 @@ require_once 'objJqueryseopalavra.php';
 require_once 'objJqueryseorel.php';
 require_once 'objJqueryseotabela.php';
 require_once 'objLocmapaponto.php';
+
+require_once 'objEalternativa.php';
+require_once 'objEalternativaresultado.php';
+require_once 'objEpergunta.php';
+require_once 'objEresultado.php';

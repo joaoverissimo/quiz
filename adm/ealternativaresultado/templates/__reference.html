@@ -1,0 +1,56 @@
+<table>
+    <tr>
+        <th>__(ealternativaresultado.cod)</th>
+        <th>__(ealternativaresultado.quiz)</th>
+        <th>__(ealternativaresultado.pergunta)</th>
+        <th>__(ealternativaresultado.alternativa)</th>
+        <th>__(ealternativaresultado.resultado)</th>
+    </tr>
+    <repeat>
+        <tr>
+            <td>getCod</td>
+            <td>getQuiz</td>
+            <td>getPergunta</td>
+            <td>getAlternativa</td>
+            <td>getResultado</td>
+        </tr>
+    </repeat>
+</table>
+
+<h2>Associações:</h2>
+<repeat>
+<ul style="border: 1px solid red; margin: 10px">
+    <li><b>objQuiz</b></li>
+    <li>objQuiz->getCod</li>
+    <li>objQuiz->getUsuario</li>
+    <li>objQuiz->getSeo</li>
+    <li>objQuiz->getTitulo</li>
+    <li>objQuiz->getData</li>
+    <li>objQuiz->getImagem</li>
+    <li>objQuiz->getFlaprovado</li>
+
+    <li><b>objPergunta</b></li>
+    <li>objPergunta->getCod</li>
+    <li>objPergunta->getQuiz</li>
+    <li>objPergunta->getDescricao</li>
+    <li>objPergunta->getImagem</li>
+    <li>objPergunta->getOrdem</li>
+
+    <li><b>objAlternativa</b></li>
+    <li>objAlternativa->getCod</li>
+    <li>objAlternativa->getQuiz</li>
+    <li>objAlternativa->getPergunta</li>
+    <li>objAlternativa->getDescricao</li>
+    <li>objAlternativa->getImagem</li>
+    <li>objAlternativa->getOrdem</li>
+
+    <li><b>objResultado</b></li>
+    <li>objResultado->getCod</li>
+    <li>objResultado->getQuiz</li>
+    <li>objResultado->getDescricao</li>
+    <li>objResultado->getTexto</li>
+    <li>objResultado->getImagem</li>
+
+    
+</ul>
+</repeat>

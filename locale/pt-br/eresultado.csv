@@ -1,0 +1,6 @@
+table_eresultado;Eresultado
+eresultado.cod;Cod
+eresultado.quiz;Quiz
+eresultado.descricao;Descricao
+eresultado.texto;Texto
+eresultado.imagem;Imagem
