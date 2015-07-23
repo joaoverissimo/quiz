@@ -9,7 +9,7 @@ Fncs_ValidaQueryString("cod", "index.php");
 //CONEXÃO E VALORES
 $registro = new objEquiz($Conexao, true);
 $registro->loadByCod($_GET["cod"]);
-    
+
 //POST
 if (count($_POST) > 0) {
     $deletar = issetpost('delete');
@@ -41,7 +41,7 @@ $form->end();
 ?><!DOCTYPE HTML>
 <html>
     <head>
-        <title><?php echo __('table_equiz');?> - Deletar</title>
+        <title><?php echo __('table_equiz'); ?> - Deletar</title>
 
         <?php include '../lib/masterpage/head.php'; ?>
         <?php echo $form->getHead(); ?>
@@ -52,9 +52,9 @@ $form->end();
         <div class="main">
             <div class="inner">
                 <div class="page-header">
-                    <h3><?php echo __('table_equiz');?> <small>Deletar</small></h3>
+                    <h3><?php echo __('table_equiz'); ?> <small>Deletar</small></h3>
                 </div>
-                
+
                 <?php echo $msg; ?>
                 <?php echo $form->getForm(); ?>
             </div>

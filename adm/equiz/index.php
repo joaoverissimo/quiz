@@ -85,7 +85,7 @@ $form->end();
                                         ?></td>
                                     <td>
                                         <span class="ativar<?php echo $registro->getFlaprovado(); ?>"></span>
-                                        
+
                                     </td>
 
                                     <td>
