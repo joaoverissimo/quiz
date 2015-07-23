@@ -39,4 +39,6 @@
         border-radius: 50%;
         border-color: #558B2F;
     }
+    
+    .card .card-title{text-shadow: 1px 1px 1px #757575;}
 </style>

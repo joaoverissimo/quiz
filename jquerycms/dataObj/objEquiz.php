@@ -51,20 +51,40 @@ class objEquiz extends fbaseEquiz {
 
 // </editor-fold>
 
-    /* public function getRewriteUrl($fullUrl = false) {
-      $cod = $this->getCod();
-      $titulo = toRewriteString($this->getTitulo());
+    public function getRewriteUrl($fullUrl = false) {
+        $cod = $this->getCod();
+        $titulo = toRewriteString($this->getTitulo());
 
-      $link = "equiz/$titulo/$cod/";
+        $link = "quiz/$titulo/$cod.html";
 
-      $lang = internacionalizacao::getCurrentLang();
-      if ($lang != "pt-br") {
-      $url = $lang . "/" . $url;
-      }
+        $lang = internacionalizacao::getCurrentLang();
+        if ($lang != "pt-br") {
+            $url = $lang . "/" . $url;
+        }
 
-      if ($fullUrl)
-      return ___siteUrl . $link;
-      else
-      return "/" . $link;
-      } */
+        if ($fullUrl) {
+            return ___siteUrl . $link;
+        } else {
+            return "/" . $link;
+        }
+    }
+
+    public function getRewriteUrlResultado($fullUrl = false) {
+        $cod = $this->getCod();
+        $titulo = toRewriteString($this->getTitulo());
+
+        $link = "quiz/$titulo/$cod-resultado.html";
+
+        $lang = internacionalizacao::getCurrentLang();
+        if ($lang != "pt-br") {
+            $url = $lang . "/" . $url;
+        }
+
+        if ($fullUrl) {
+            return ___siteUrl . $link;
+        } else {
+            return "/" . $link;
+        }
+    }
+
 }
