@@ -10,6 +10,7 @@ define('___DataEHoraAtual', date('d/m/Y h:i:s'));
 define('___DataAtual', date('d/m/Y'));
 define('___AppRoot', obterDocumentRoot());
 define('___cdn', 'https://github.com/joaoverissimo/jquery-cms-2/blob/master/_instalar/baseSistema.zip?raw=true');
+define('___siteTitle', 'Jogo Quiz');
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('___phpDataServer', 'localhost');

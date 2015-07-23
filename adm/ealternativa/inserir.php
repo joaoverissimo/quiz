@@ -31,6 +31,8 @@ if (count($_POST) > 0) {
 
         if ($exec && $adm_tema != 'branco') {
             header("Location: $cancelLink");
+        } elseif (isset($_POST['acao']) && $_POST['acao'] == "on") {
+            header("Location: inserir.php?pergunta={$_GET['pergunta']}&tema=branco");
         } else {
             $msg = fEnd_MsgString("O registro foi inserido.$fEnd_closeTheIFrameImDone", 'success');
         }
@@ -55,6 +57,8 @@ if (isset($_GET['pergunta'])) {
 $form->text(__('ealternativa.descricao'), 'descricao', $registro->getDescricao(), 1);
 $form->fileImagems(__('ealternativa.imagem'), 'imagem', $registro->getImagem(), 0);
 
+$form->checkbox("Salvar e inserir outra", "acao", 1);
+
 $form->send_cancel("Salvar", $cancelLink);
 $form->end();
 ?><!DOCTYPE HTML>
@@ -74,7 +78,6 @@ $form->end();
                 <div class="page-header">
                     <h3><?php echo __('table_ealternativa'); ?> <small>Inserir</small></h3>
                 </div>
-
                 <?php echo $msg; ?>
                 <?php echo $form->getForm(); ?>
             </div>
