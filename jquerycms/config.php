@@ -22,10 +22,10 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('___SimpleCacheTime', 0);
 } else {
     define('___phpDataServer', 'localhost');
-    define('___phpDataDb', 'quiz');
-    define('___phpDataUser', 'root');
-    define('___phpDataPass', '');
-    define('___siteUrl', 'http://www.localhost.com.br/');
+    define('___phpDataDb', 'distanes_quiz');
+    define('___phpDataUser', 'distanes_quiz');
+    define('___phpDataPass', 'B2T6z7!HK3oV');
+    define('___siteUrl', 'http://quiz.distanciaentreciudades.es/');
     define('___siteContactMail', 'contato@localhost.com.br');
     define('___SimpleCacheTime', 3 * 60); //3 minutos para cache
 }
