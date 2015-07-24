@@ -18,3 +18,4 @@ require_once 'objEalternativa.php';
 require_once 'objEalternativaresultado.php';
 require_once 'objEpergunta.php';
 require_once 'objEresultado.php';
+require_once 'objEpubliquev1.php';

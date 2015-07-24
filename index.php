@@ -29,7 +29,7 @@ $dados = dbEquiz::ObjsListLeft($Conexao, $where, $orderBy, $pager->getLimit());
                 <?php if ($dados) : ?>
                     <?php foreach ($dados as $objQuiz) : ?>
                         <div class="col s12 m4">
-                            <div class="card small">
+                            <div class="card small hoverable">
                                 <?php if ($objQuiz->getImagem() !== null && $objQuiz->objImagem()->getExiste()) : ?>
                                     <h3 class="card-image" style="margin: 0; line-height: initial">
                                         <a href="<?php echo $objQuiz->getRewriteUrl(); ?>">

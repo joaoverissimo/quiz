@@ -11,6 +11,7 @@ class dbaseEquiz {
     const _data = "equiz.data";
     const _imagem = "equiz.imagem";
     const _flaprovado = "equiz.flaprovado";
+    const _votos = "equiz.votos";
 
     public static function Carregar($Conexao, $valor, $campo = 'cod') {
         $dados = dataCarregar($Conexao, 'equiz', $campo, $valor);
@@ -43,12 +44,12 @@ class dbaseEquiz {
         }
     }
 
-    public static function Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado) {
+    public static function Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos) {
         try {
             $sql = "INSERT INTO `equiz`
-                    (`usuario`, `seo`, `titulo`, `data`, `imagem`, `flaprovado`)
+                    (`usuario`, `seo`, `titulo`, `data`, `imagem`, `flaprovado`, `votos`)
                     VALUES
-                    (:usuario, :seo, :titulo, STR_TO_DATE(:data,'%d/%m/%Y %H:%i:%s'), :imagem, :flaprovado)";
+                    (:usuario, :seo, :titulo, STR_TO_DATE(:data,'%d/%m/%Y %H:%i:%s'), :imagem, :flaprovado, :votos)";
 
             $statement = $Conexao->prepare($sql);
 
@@ -100,6 +101,14 @@ class dbaseEquiz {
             else
                 $statement->bindValue(":flaprovado", $flaprovado);
 
+            //$votos - allow db null: NO 
+            if (!isset($votos) && 'YES' == 'NO')
+                $statement->bindValue(":votos", null);
+            elseif (!isset($votos))
+                $statement->bindValue(":votos", "");
+            else
+                $statement->bindValue(":votos", $votos);
+
 
 
             $retorno = $statement->execute();
@@ -119,7 +128,7 @@ class dbaseEquiz {
         }
     }
 
-    public static function Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado) {
+    public static function Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos) {
         try {
             $sql = "UPDATE `equiz` SET
                    `usuario` = :usuario,
@@ -127,7 +136,8 @@ class dbaseEquiz {
                     `titulo` = :titulo,
                     `data` = STR_TO_DATE(:data,'%d/%m/%Y %H:%i:%s'),
                     `imagem` = :imagem,
-                    `flaprovado` = :flaprovado
+                    `flaprovado` = :flaprovado,
+                    `votos` = :votos
 
                    WHERE  `cod` = :cod;";
 
@@ -189,6 +199,14 @@ class dbaseEquiz {
             else
                 $statement->bindValue(":flaprovado", $flaprovado);
 
+            //$votos - allow db null: NO 
+            if (!isset($votos) && 'YES' == 'NO')
+                $statement->bindValue(":votos", null);
+            elseif (!isset($votos))
+                $statement->bindValue(":votos", "");
+            else
+                $statement->bindValue(":votos", $votos);
+
 
 
             $retorno = $statement->execute();
@@ -223,11 +241,11 @@ class dbaseEquiz {
 
     public static function Listar($Conexao, $where = "", $orderBy = "", $limit = "") {
         if ($where instanceof dataFilter) {
-            $where->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado");
+            $where->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado, equiz.votos");
         }
 
         if ($orderBy instanceof dataOrder) {
-            $orderBy->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado");
+            $orderBy->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado, equiz.votos");
         } elseif (!$orderBy) {
             $orderBy = "cod desc";
         }
@@ -244,11 +262,11 @@ class dbaseEquiz {
 
     public static function ListarLeft($Conexao, $where = "", $orderBy = "", $limit = "") {
         if ($where instanceof dataFilter) {
-            $where->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado , usuario_rel.cod , usuario_rel.nome , usuario_rel.mail , usuario_rel.senha , usuario_rel.grupo , seo_rel.cod , seo_rel.titulo , seo_rel.descricao , imagem_rel.cod , imagem_rel.valor ");
+            $where->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado, equiz.votos , usuario_rel.cod , usuario_rel.nome , usuario_rel.mail , usuario_rel.senha , usuario_rel.grupo , seo_rel.cod , seo_rel.titulo , seo_rel.descricao , imagem_rel.cod , imagem_rel.valor ");
         }
 
         if ($orderBy instanceof dataOrder) {
-            $orderBy->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado , usuario_rel.cod , usuario_rel.nome , usuario_rel.mail , usuario_rel.senha , usuario_rel.grupo , seo_rel.cod , seo_rel.titulo , seo_rel.descricao , imagem_rel.cod , imagem_rel.valor ");
+            $orderBy->setValidFields("equiz.cod, equiz.usuario, equiz.seo, equiz.titulo, equiz.data, equiz.imagem, equiz.flaprovado, equiz.votos , usuario_rel.cod , usuario_rel.nome , usuario_rel.mail , usuario_rel.senha , usuario_rel.grupo , seo_rel.cod , seo_rel.titulo , seo_rel.descricao , imagem_rel.cod , imagem_rel.valor ");
         } elseif (!$orderBy) {
             $orderBy = "cod desc";
         }

@@ -5,14 +5,14 @@
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/random-quiz.php">Quiz aleatório</a></li>
-            <li><a href="#">+Votados</a></li>
-            <li><a href="#">Publique seu quiz</a></li>
+            <li><a href="/mais-votados.php">+Votados</a></li>
+            <li><a href="/publique.php">Publique seu quiz</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="/">Home</a></li>
             <li><a href="/random-quiz.php">Quiz aleatório</a></li>
-            <li><a href="#">+Votados</a></li>
-            <li><a href="#">Publique seu quiz</a></li>
+            <li><a href="/mais-votados.php">+Votados</a></li>
+            <li><a href="/publique.php">Publique seu quiz</a></li>
         </ul>
     </div>
 </nav>

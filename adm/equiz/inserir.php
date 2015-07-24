@@ -21,6 +21,7 @@ if (count($_POST) > 0) {
         $registro->setTitulo(issetpost('titulo'));
         $registro->setData(___DataEHoraAtual);
         $registro->setFlaprovado(issetpostInteger('flaprovado'));
+        $registro->setVotos(0);
 
         if (isset($_FILES['imagem-file']) && $_FILES['imagem-file']["size"] > 0) {
             //Se possui imagem chama funcao de insercao de imagem

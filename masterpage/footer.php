@@ -6,19 +6,19 @@
                 <p class="grey-text text-lighten-4">O melhor site para jogo de quiz.</p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text"><?php echo ___siteTitle;?></h5>
+                <h5 class="white-text"><?php echo ___siteTitle; ?></h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Novos</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">+Votados</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Publique seu quiz</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/random-quiz.php">Novos</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/mais-votados.php">+Votados</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/publique.php">Publique seu quiz</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright light-green darken-4">
         <div class="container">
-            © 2015 - <?php echo ___siteTitle;?>
+            © 2015 - <?php echo ___siteTitle; ?>
         </div>
     </div>
 </footer>

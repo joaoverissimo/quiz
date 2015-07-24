@@ -5,14 +5,14 @@ require_once "base/dbaseEquiz.php";
 class dbEquiz extends dbaseEquiz {
 
 // <editor-fold defaultstate="collapsed" desc="Inserir, Update, Deletar">       
-    public static function Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $die = false) {
+    public static function Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos, $die = false) {
 
-        return parent::Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $die);
+        return parent::Inserir($Conexao, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos, $die);
     }
 
-    public static function Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $die = false) {
+    public static function Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos, $die = false) {
 
-        return parent::Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $die);
+        return parent::Update($Conexao, $cod, $usuario, $seo, $titulo, $data, $imagem, $flaprovado, $votos, $die);
     }
 
     public static function Deletar($Conexao, $cod) {

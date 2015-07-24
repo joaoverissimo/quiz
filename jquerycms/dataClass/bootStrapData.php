@@ -18,3 +18,4 @@ require_once 'dbEalternativa.php';
 require_once 'dbEalternativaresultado.php';
 require_once 'dbEpergunta.php';
 require_once 'dbEresultado.php';
+require_once 'dbEpubliquev1.php';

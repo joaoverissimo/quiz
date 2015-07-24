@@ -1,8 +1,9 @@
 table_equiz;Quiz
-equiz.cod;#
+equiz.cod;Cod
 equiz.usuario;Usuário
-equiz.seo;SEO
+equiz.seo;Seo
 equiz.titulo;Título
 equiz.data;Data
 equiz.imagem;Imagem
 equiz.flaprovado;Aprovado
+equiz.votos;Votos

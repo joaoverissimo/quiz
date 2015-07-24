@@ -13,19 +13,19 @@ if (isset($_GET['filtraList']) && $_GET['filtraList']) {
 //Lista os dados
 $where = '';
 if ($filtraList) {
-    //$where = new dataFilter(dbEquiz::_cod, 0, dataFilter::op_different);
-    $where = new dataFilter(dbEquiz::_titulo, $filtraList, dataFilter::op_likeMatches);
+    //$where = new dataFilter(dbEpubliquev1::_cod, 0, dataFilter::op_different);
+    $where = new dataFilter(dbEpubliquev1::_email, $filtraList, dataFilter::op_likeMatches);
 }
 
-$orderBy = new dataOrder('equiz.cod', 'desc');
+$orderBy = new dataOrder('epubliquev1.cod', 'desc');
 
 $paginaAtual = 0;
 if (isset($_REQUEST['page']))
     $paginaAtual = $_REQUEST['page'];
 
-$pager = new dataPager($paginaAtual, 15, $Conexao, 'equiz', $where);
+$pager = new dataPager($paginaAtual, 15, $Conexao, 'epubliquev1', $where);
 
-$dados = dbEquiz::ObjsListLeft($Conexao, $where, $orderBy, $pager->getLimit());
+$dados = dbEpubliquev1::ObjsListLeft($Conexao, $where, $orderBy, $pager->getLimit());
 
 $form = new autoform2();
 $form->start("cadastro", "", "GET", array('class' => 'form-inline pull-right'));
@@ -35,7 +35,7 @@ $form->end();
 ?><!DOCTYPE HTML>
 <html>
     <head>
-        <title><?php echo __('table_equiz'); ?> - Listar</title>
+        <title><?php echo __('table_epubliquev1'); ?> - Listar</title>
         <link rel='stylesheet' type='text/css' href='/jquerycms/js/autoform.css' />
 
         <?php include '../lib/masterpage/head.php'; ?>
@@ -46,12 +46,11 @@ $form->end();
         <div class="main">
             <div class="inner">
                 <div class="page-header">
-                    <h3><?php echo __('table_equiz'); ?> <small>Listar</small></h3>
+                    <h3><?php echo __('table_epubliquev1'); ?> <small>Listar</small></h3>
                 </div>
 
                 <div class="btn-toolbar">
                     <a href="inserir.php" class="btn btn-primary"><i class="icon-plus icon-white"></i> Inserir</a>
-                    <a href="sincronizar-face.php" class="btn"><i class="icon-comment"></i> Obter votos facebook</a>
 
                     <?php echo $form->getForm(); ?>
                 </div>
@@ -62,13 +61,8 @@ $form->end();
                             <thead>
                                 <tr>
                                     <th class="th-multi"></th>
-                                    <th><?php echo __('equiz.cod'); ?></th> 
-                                    <th><?php echo __('equiz.usuario'); ?></th> 
-                                    <th><?php echo __('equiz.titulo'); ?></th> 
-                                    <th><?php echo __('equiz.data'); ?></th> 
-                                    <th><?php echo __('equiz.imagem'); ?></th> 
-                                    <th><?php echo __('equiz.flaprovado'); ?></th> 
-                                    <th><?php echo __('equiz.votos'); ?></th> 
+                                    <th><?php echo __('epubliquev1.cod'); ?></th> 
+                                    <th><?php echo __('epubliquev1.email'); ?></th> 
 
                                     <th class="th-actions"></th>
                                 </tr>
@@ -77,20 +71,8 @@ $form->end();
                                 <tr>
                                     <td><label><input type="checkbox" name="multi[]" value="<?php echo $registro->getCod(); ?>" class="multi-input" /></td>
                                     <td><?php echo $registro->getCod(); ?></td>
-                                    <td><?php echo $registro->objUsuario()->getNome(); ?></td>
-                                    <td><?php echo $registro->getTitulo(); ?></td>
-                                    <td><?php echo $registro->getData(); ?></td>
-                                    <td><?php
-                                        if ($registro->getImagem() && $registro->objImagem()->getExiste()) {
-                                            echo "<img src='{$registro->objImagem()->getSrc(70, 35)}' />";
-                                        }
-                                        ?></td>
-                                    <td>
-                                        <span class="ativar<?php echo $registro->getFlaprovado(); ?>"></span>
-                                    </td>
-                                    <td>
-                                        <?php echo $registro->getVotos(); ?>
-                                    </td>
+                                    <td><?php echo $registro->getEmail(); ?></td>
+
                                     <td>
                                         <div class="btn-group">
                                             <a class="btn btn-primary" href="editar.php?cod=<?php echo $registro->getCod(); ?>"><i class="icon-pencil icon-white"></i> <?php echo __('editar'); ?></a>
