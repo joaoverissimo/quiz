@@ -29,7 +29,11 @@ if (count($_POST) > 0) {
 }
 
 $dbResultados = dbEresultado::ObjsList($Conexao, new dataFilter(dbEresultado::_quiz, $registro->getCod()));
-$dbAlternativaResultado = dbEalternativaresultado::ObjsList($Conexao, new dataFilter(dbEalternativaresultado::_quiz, $registro->getCod()));
+$where = new dataFilter(dbEalternativaresultado::_quiz, $registro->getCod());
+$dbAlternativaResultado = dbEalternativaresultado::ObjsList($Conexao, $where);
+/*echo $where->SqlSimple();
+print_r($dbAlternativaResultado);
+die();*/
 ?><!DOCTYPE HTML>
 <html>
     <head>
@@ -80,7 +84,7 @@ if (issetArray($dbAlternativaResultado)) {
                 </div>
 
                 <?php echo $msg; ?>
-                <form name='cadastro' id='cadastro' action='http://quiz.com.br/adm/equiz/alternativaresultado.php?cod=4&tema=branco' method='POST' class='form-horizontal' enctype='multipart/form-data'  >
+                <form name='cadastro' id='cadastro' method='POST' class='form-horizontal' enctype='multipart/form-data'  >
 
                     <fieldset>
                         <legend>Perguntas</legend>

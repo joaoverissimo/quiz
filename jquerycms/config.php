@@ -12,7 +12,7 @@ define('___AppRoot', obterDocumentRoot());
 define('___cdn', 'https://github.com/joaoverissimo/jquery-cms-2/blob/master/_instalar/baseSistema.zip?raw=true');
 define('___siteTitle', 'Jogo Quiz');
 
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
+if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'quiz.com.br') {
     define('___phpDataServer', 'localhost');
     define('___phpDataDb', 'quiz');
     define('___phpDataUser', 'root');
