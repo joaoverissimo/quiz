@@ -1,6 +1,6 @@
 <nav style="margin-bottom: 20px;">
     <div class="nav-wrapper light-green darken-3">
-        <a href="/" class="brand-logo"><?php echo ___siteTitle; ?></a>
+        <a href="/" class="brand-logo"><?php echo ___siteTitle; ?> -- localhost</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>

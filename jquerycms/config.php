@@ -22,10 +22,10 @@ if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'quiz.c
     define('___SimpleCacheTime', 0);
 } else {
     define('___phpDataServer', 'localhost');
-    define('___phpDataDb', 'distanes_quiz');
-    define('___phpDataUser', 'distanes_quiz');
-    define('___phpDataPass', 'B2T6z7!HK3oV');
-    define('___siteUrl', 'http://quiz.distanciaentreciudades.es/');
+    define('___phpDataDb', 'quiz');
+    define('___phpDataUser', 'root');
+    define('___phpDataPass', '');
+    define('___siteUrl', 'http://facetest.com.br/');
     define('___siteContactMail', 'contato@localhost.com.br');
     define('___SimpleCacheTime', 3 * 60); //3 minutos para cache
 }
@@ -45,11 +45,11 @@ function obterDocumentRoot() {
     $AppRoot = $_SERVER['DOCUMENT_ROOT'];
     if ($AppRoot[strlen($AppRoot) - 1] != "/")
         $AppRoot.= "/";
-        
+
     return $AppRoot;
 }
 
-function CarregarConexao(){
+function CarregarConexao() {
     $phpDataServer = ___phpDataServer;
     $phpDataDb = ___phpDataDb;
     $phpDataUser = ___phpDataUser;
