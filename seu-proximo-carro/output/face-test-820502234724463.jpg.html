@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+<style>
+    @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+    }
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        word-wrap: normal;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .tabs .tab a {color: #558B2F}
+    .tabs .tab a:hover {color: green}
+    .tabs .indicator {background-color: #558B2F}
+
+    [type="radio"]:checked+label:after,
+    [type="radio"].with-gap:checked+label:after 
+    {border-color: #558B2F; background-color: #558B2F;}
+
+    [type="radio"].with-gap:checked+label:before{
+        border-radius: 50%;
+        border-color: #558B2F;
+    }
+    
+    .card .card-title{text-shadow: 1px 1px 1px #757575;}
+</style>
+        <title>Descubra seu próximo carro</title>
+        
+        <meta property="og:image" content="http://facetest.com.br//seu-proximo-carro/face-test-820502234724463.jpg" />
+        <meta property="og:title" content="O próximo carro de João Verissimo Ribeiro será um Chevrolet Onix" />
+        <meta property="og:url" content="http://facetest.com.br/seu-proximo-carro/index.php" />
+    </head>
+    <body>        
+        <nav style="margin-bottom: 20px;">
+    <div class="nav-wrapper light-green darken-3">
+        <a href="/" class="brand-logo">Jogo Quiz -- localhost</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/random-quiz.php">Quiz aleatório</a></li>
+            <li><a href="/mais-votados.php">+Votados</a></li>
+            <li><a href="/publique.php">Publique seu quiz</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="/">Home</a></li>
+            <li><a href="/random-quiz.php">Quiz aleatório</a></li>
+            <li><a href="/mais-votados.php">+Votados</a></li>
+            <li><a href="/publique.php">Publique seu quiz</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col s3 offset-s9 grid-example">
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55b17019167b02ad" async="async"></script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_native_toolbox"></div>
+    </div>
+</div>        <h1 style="font-size: 2.1em;">E o seu próximo carro será....</h1>
+
+        <div class="row">
+
+            <div class="col s12">
+                <div class="face-compartilhar">
+                    <div class="fb-share-button" 
+                         data-href="http://facetest.com.br/seu-proximo-carro/index.php" 
+                         data-layout="button_count">
+                    </div>
+                    <script>(function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id))
+                                return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4&appId=1614001052210913";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                </div>
+
+                <img src="face-test-820502234724463.jpg" />
+            </div>
+        </div>
+
+        <footer class="page-footer light-green darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Quiz.com.br</h5>
+                <p class="grey-text text-lighten-4">O melhor site para jogo de quiz.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Jogo Quiz</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/random-quiz.php">Novos</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/mais-votados.php">+Votados</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/publique.php">Publique seu quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright light-green darken-4">
+        <div class="container">
+            © 2015 - Jogo Quiz        </div>
+    </div>
+</footer>
+
+<script type='text/javascript' src='/jquerycms/js/jquery.validate.min.js'></script>
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+        $('select').material_select('destroy');
+    });
+</script>    </body>
+</html>

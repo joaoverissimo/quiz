@@ -5,6 +5,10 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+
+define('APP_ID', '1614001052210913');
+define('APP_SECRET', 'b22d333dfc3e13ca8d641992234be92e');
+
 define('___MyDebugger', true);
 define('___DataEHoraAtual', date('d/m/Y h:i:s'));
 define('___DataAtual', date('d/m/Y'));
@@ -23,8 +27,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'quiz.c
 } else {
     define('___phpDataServer', 'localhost');
     define('___phpDataDb', 'quiz');
-    define('___phpDataUser', 'root');
-    define('___phpDataPass', '');
+    define('___phpDataUser', 'conweb');
+    define('___phpDataPass', 'conweb2015');
     define('___siteUrl', 'http://facetest.com.br/');
     define('___siteContactMail', 'contato@localhost.com.br');
     define('___SimpleCacheTime', 3 * 60); //3 minutos para cache

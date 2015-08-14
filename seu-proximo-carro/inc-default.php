@@ -13,7 +13,7 @@
                 <p>Faça login com o facebook para descobrir qual o seu próximo carro:</p>
 
                 <a href="<?php echo $loginUrl; ?>">
-                    <img src="http://www.adweek.com/socialtimes/wp-content/uploads/sites/2/2013/10/FBloginbutton.png" />
+                    <img src="/masterpage/entar-facebook.png" />
                 </a>
             </div>
         </div>

@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    RewriteRule ^face-test-([a-z0-9-]+).html?$ resultado.php?id=$1 [NC]
+	
+</IfModule>
